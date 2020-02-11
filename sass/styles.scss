@@ -1,9 +1,12 @@
 @import 'reset';
-
+@import 'mixin';
 
 
 body {
     background-color: black;
+    @include breakpoint(800px) {
+
+      }
 }
 
 
@@ -26,13 +29,25 @@ padding: 6rem;
 
 
 .display-grid {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: row;
-    margin: 25%; 
-    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    @include breakpoint(800px) {
+         grid-template-columns: repeat(4, 1fr);
+         max-width: 100%;
+    }
+
+    div {
+        min-height: 200px;
+        max-width: auto;
+        background-color: white;
+    }
+    
 }
+
+
 .footer {
     display: flex;
     align-items: center; 
@@ -40,3 +55,4 @@ padding: 6rem;
     margin: 10%; 
     color: #ffffff;
 }
+
