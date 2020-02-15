@@ -10,8 +10,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const prettyError = require('gulp-prettyerror');
 
-
-
 gulp.task('scripts', function () {
   return gulp
     .src('./js/*.js') // What files do we want gulp to consume?
@@ -55,16 +53,10 @@ gulp.task('reload', function (done) {
 
 gulp.task('lint', function () {
   return gulp
-
     .src(['./js/*.js'])
-
     .pipe(eslint())
-
     .pipe(eslint.format())
-
     .pipe(eslint.failAfterError())
-
-
 });
 
 gulp.task('default', gulp.parallel('scripts', 'sass', 'watch', 'browser-sync'))

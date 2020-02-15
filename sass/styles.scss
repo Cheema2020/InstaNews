@@ -29,6 +29,7 @@ padding: 6rem;
 
 
 .display-grid {
+    padding-top: 1rem;
     max-width: 800px;
     margin: 0 auto;
     display: grid;
@@ -39,14 +40,14 @@ padding: 6rem;
          max-width: 100%;
     }
 
-    div {
+    .box {
         min-height: 200px;
         max-width: auto;
         background-color: white;
     }
     
-}
-
+};
+ 
 
 .footer {
     display: flex;
