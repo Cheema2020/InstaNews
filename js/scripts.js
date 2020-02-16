@@ -1,5 +1,5 @@
 document.getElementById('new-news').addEventListener('change', function () {
-    const newsGrid = document.getElementById('grid')
+    const newsGrid = document.getElementById('newsgrid')
     console.log('change')
     const selectedCategory = this.value;
 
@@ -16,12 +16,11 @@ document.getElementById('new-news').addEventListener('change', function () {
             const articalsWithImage = data.results
                 .filter(
                     function (item) {
-                        if (item.multimedia && item.multimedia.length > 0 && item.multimedia[0].url) {
+                        if (item.multimedia && item.multimedia.length > 0 && item.multimedia[2].url) {
                             return true;
                         } else {
                             return false;
                         }
-
                     }
                 )
                 .slice(0, 12);
@@ -29,19 +28,33 @@ document.getElementById('new-news').addEventListener('change', function () {
             //console.log(articalsWithImage)
 
 
-            //create artical images 
+            //create artical images articalbox
             for (let i = 0; i < articalsWithImage.length; i++) {
-                console.log(articalsWithImage[i].abstract, articalsWithImage[i].url, articalsWithImage[i].multimedia[0].url);
+                console.log(articalsWithImage[i].abstract), (articalsWithImage[i].url), (articalsWithImage[i].multimedia[2].url);
+                console.log(articalsWithImage);
+
+                const articleImage = document.createElement('div');
+                articleImage.classList.add('articalimage');
+                articleImage.style = 'background-image:url(' + articalsWithImage[i].multimedia[2].url + ')';
 
 
-                const abstract = document.createElement('p').classList.add('abstractstyle');
+                const abstract = document.createElement('p');
+                abstract.classList.add('abstractstyle');
                 abstract.innerHTML = articalsWithImage[i].abstract;
 
-                const url = document.createElement('a').classList.add('urllink');
-                url.innerHTML = articalsWithImage[i].url;
+                const articleLink = document.createElement('a');
+                articleLink.classList.add('urllink');
+                articleLink.href = articalsWithImage[i].url;
 
-                const articalBox = document.createElement('li').classList.add('box');
-                articalBox.innerHTML = articalsWithImage[i].multimedia[0].url;
+                articleLink.appendChild(articleImage);
+                articleLink.appendChild(abstract);
+
+                const articalBox = document.createElement('li');
+                articalBox.classList.add('articalbox');
+
+                articalBox.appendChild(articleLink);
+
+                newsGrid.appendChild(articalBox);
             }
             //create paragraph element for article abstract\
             // create A element for url
