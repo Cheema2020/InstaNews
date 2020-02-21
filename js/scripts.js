@@ -11,7 +11,7 @@ document.getElementById('new-news').addEventListener('change', function () {
         url: `https://api.nytimes.com/svc/topstories/v2/${selectedCategory}.json?api-key=hWGg3WoqqktQszTelrmzz2nbkvre4mH9`
     })
         .done(function (data) {
-            //console.log(data)
+           
 
             //filter out articals without images  
             //limit articals to 12 
@@ -28,8 +28,6 @@ document.getElementById('new-news').addEventListener('change', function () {
                 .slice(0, 12);
 
            
-
-            console.log(articalsFromNyt);
 
             while (newsGrid.lastChild) {
                 newsGrid.removeChild(newsGrid.lastChild);
