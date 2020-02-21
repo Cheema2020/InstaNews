@@ -2,7 +2,6 @@ const loader = document.getElementById('loader');
 
 document.getElementById('new-news').addEventListener('change', function () {
     const newsGrid = document.getElementById('newsgrid')
-    console.log('change');
     const selectedCategory = this.value;
     loader.classList.toggle('show');
 
@@ -28,7 +27,7 @@ document.getElementById('new-news').addEventListener('change', function () {
                 )
                 .slice(0, 12);
 
-            //console.log(articalsFromNyt)
+           
 
             console.log(articalsFromNyt);
 
@@ -64,42 +63,12 @@ document.getElementById('new-news').addEventListener('change', function () {
 
                 newsGrid.appendChild(articalBox);
             }
-            //create paragraph element for article abstract\
-            // create A element for url
-            //create li with a background image 
+           
             loader.classList.toggle('show');
-
-
-            // function myFunction('display-grid') {
-            //     var x = document.createElement('IMG');
-            //     x.setAttribute('url');
-            //     x.setAttribute('image');
-            //     x.setAttribute('articals');
-            //     document.body.appendChild(x);
-            //}
-
-
-
-
-
-
 
         });
 
-
-    /*
-    if (data.results.length > 0) {
-        const articleWithImagesArray = data.results.filter(item => item.multimedia && item.)
-    };
-    */
-
-
 });
 
- // $('display-grid').append('div');
-
-        //results.innerHTML = (event.target.value);
-
-//"section":"arts",
 
 

@@ -1,5 +1,5 @@
-const gulp = require('gulp'); // Load Gulp!
-// Now that we've installed the terser package we can require it:
+const gulp = require('gulp');
+
 const terser = require('gulp-terser');
 const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
@@ -12,10 +12,10 @@ const prettyError = require('gulp-prettyerror');
 
 gulp.task('scripts', function () {
   return gulp
-    .src('./js/*.js') // What files do we want gulp to consume?
-    .pipe(terser()) // Call the terser function on these files
-    .pipe(rename({ extname: '.min.js' })) // Rename the uglified file
-    .pipe(gulp.dest('./build/js')); // Where do we put the result?
+    .src('./js/*.js') 
+    .pipe(terser()) 
+    .pipe(rename({ extname: '.min.js' })) 
+    .pipe(gulp.dest('./build/js')); 
 });
 
 gulp.task('watch', function () {
