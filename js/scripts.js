@@ -70,13 +70,7 @@ document.getElementById('new-news').addEventListener('change', function () {
             loader.classList.toggle('show');
 
 
-            // function myFunction('display-grid') {
-            //     var x = document.createElement('IMG');
-            //     x.setAttribute('url');
-            //     x.setAttribute('image');
-            //     x.setAttribute('articals');
-            //     document.body.appendChild(x);
-            //}
+           
 
 
 
@@ -87,19 +81,11 @@ document.getElementById('new-news').addEventListener('change', function () {
         });
 
 
-    /*
-    if (data.results.length > 0) {
-        const articleWithImagesArray = data.results.filter(item => item.multimedia && item.)
-    };
-    */
+    
 
 
 });
 
- // $('display-grid').append('div');
-
-        //results.innerHTML = (event.target.value);
-
-//"section":"arts",
+ 
 
 
