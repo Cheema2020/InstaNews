@@ -9,6 +9,15 @@ body {
     }
 }
 
+.header-with-content {
+	height: 6rem;
+	@include tablet {
+		height: 4rem;
+		margin-right: 2.6rem;
+	}
+	transition: all 0.8s ease-in-out;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -16,19 +25,32 @@ header {
     align-items: center;
     margin: 0 auto;
     max-width: 1600px;
+    transition: all 0.8s ease-in-out;
+
+    .logo {
+     padding: 6rem;
+       
+        
+
+        .selecter {
+            margin-bottom: 5px;
+            font-size: larger;
+            color: #ffffff;
+        
+            .dropdown {
+                width: 400px;
+                font-size: larger;
+          
+            }
+          
+                        
+        }           
+
+
+    }
+
 }
-.logo {
-    padding: 6rem;
-}
-.selecter {
-    margin-bottom: 5px;
-    font-size: larger;
-    color: #ffffff;
-}
-.dropdown {
-    width: 400px;
-    font-size: larger;
-}
+
 
 .loader{
     display: none;
@@ -38,13 +60,14 @@ header {
 
 .show{
     display: block;
-}
+    animation-duration: 0.5s;
+    transition: all 0.5s ease-in-out;
+
+} 
 
 
 .display-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
     padding-top: 1rem;
     min-width: 600px;
     margin: 0 auto;
@@ -102,3 +125,9 @@ a.urllink:link,a.urllink:visited,a.urllink:hover,a.urllink:active{
     margin: 10%; 
     color: #c2c2c2;
 }
+
+
+
+
+
+

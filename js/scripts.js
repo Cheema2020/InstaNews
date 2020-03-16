@@ -70,10 +70,6 @@ document.getElementById('new-news').addEventListener('change', function () {
             loader.classList.toggle('show');
 
 
-           
-
-
-
 
 
 
@@ -81,11 +77,8 @@ document.getElementById('new-news').addEventListener('change', function () {
         });
 
 
-    
-
-
 });
 
- 
+
 
 
