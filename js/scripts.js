@@ -30,7 +30,7 @@ document.getElementById('new-news').addEventListener('change', function () {
 
             //console.log(articalsFromNyt)
 
-            console.log(articalsFromNyt);
+            // console.log(articalsFromNyt);
 
             while (newsGrid.lastChild) {
                 newsGrid.removeChild(newsGrid.lastChild);
@@ -63,14 +63,16 @@ document.getElementById('new-news').addEventListener('change', function () {
                 articalBox.appendChild(articleLink);
 
                 newsGrid.appendChild(articalBox);
+
+                
             }
             //create paragraph element for article abstract\
             // create A element for url
             //create li with a background image 
+
+
+
             loader.classList.toggle('show');
-
-
-
 
 
 

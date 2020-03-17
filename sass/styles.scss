@@ -52,18 +52,20 @@ header {
 }
 
 
+.show{
+    display: block;
+    animation-duration: 0.5s;
+    
+
+} 
+
 .loader{
     display: none;
     width: 50px;
     height: 50px;
 }
 
-.show{
-    display: block;
-    animation-duration: 0.5s;
-    transition: all 0.5s ease-in-out;
 
-} 
 
 
 .display-grid {
